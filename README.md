@@ -10,19 +10,19 @@ A nautically themed tool that runs Puppeteer and Lighthouse to generate HAR file
 npm install perf-har-poon
 ```
 
-`blubber` is async. It uses workers to spin up Puppeteer, so you can call it on a bunch of URLs in parallel.
+`blubber` is asynchronous. It uses workers to spin up Puppeteer, so you can call it on a bunch of URLs in parallel.
 
 ```js
-import { blubber } from 'perf-har-poon'
+import { blubber } from "perf-har-poon"
 
 // You can get the HAR data for a web page visit...
-const { har } = await blubber({ url: "[URL]" })
+const { har } = await blubber({ url: "URL_TO_TEST" })
 
 // Or specific Lighthouse reports, if you want them.
-const { report } = await blubber({ url: "[URL]", audits: ['network-rtt', 'errors-in-console'] })
+const { report } = await blubber({ url: "URL_TO_TEST", audits: ["network-rtt", "errors-in-console"] })
 
 // You could override the default Chrome args, but you shouldn't.
-const { har } = await blubber({ url: "[URL]", chromeArgs: ['--headless'] })
+const { har } = await blubber({ url: "URL_TO_TEST", chromeArgs: ["--headless"] })
 ```
 
 `blubber` returns a `Promise` that resolves with an object that looks like this: 
@@ -39,7 +39,7 @@ If you want to read the Lighthouse logs, set [`logLevel`](https://github.com/Goo
 
 ```js
 // You can read the logs from Lighthouse.
-const { har } = await blubber({ url: "[URL]", logLevel: 'verbose' })
+const { har } = await blubber({ url: "URL_TO_TEST", logLevel: "verbose" })
 ```
 
 ## Using the Docker container
