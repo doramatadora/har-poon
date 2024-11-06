@@ -1,0 +1,40 @@
+{
+  "name": "perf-har-poon",
+  "description": "A tool that runs Puppeteer and Lighthouse to generate HAR files. Available as a library and server.",
+  "keywords": [
+      "har",
+      "lighthouse",
+      "puppeteer",
+      "chrome"
+  ],
+  "version": "1.0.0",
+  "main": "lib/blubber.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Dora Militaru <dora@doramilitaru.com>",
+  "license": "MIT",
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/doramatadora/har-poon.git"
+  },
+  "bugs": {
+      "url": "https://github.com/doramatadora/har-poon/issues"
+  },
+  "homepage": "https://github.com/doramatadora/har-poon#readme",
+  "dependencies": {
+    "@formatjs/icu-messageformat-parser": "^2.9.3",
+    "chrome-har": "^1.0.1",
+    "lighthouse": "^12.2.1",
+    "puppeteer": "^23.7.0"
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.5",
+    "fastify": "^5.1.0"
+  },
+  "resolutions": {
+    "intl-messageformat-parser": "@formatjs/icu-messageformat-parser"
+  }
+}
